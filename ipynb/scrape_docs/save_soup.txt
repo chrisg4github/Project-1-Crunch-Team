@@ -1,0 +1,62 @@
+********  Start for loop to read soup  ********
+<div class="rankingItem-underTitle" itemprop="url">
+<a class="rankingItem-subTitle is-link" data-analytics-category="Internal Link" data-analytics-label="Global Rank/Worldwide" href="/top-websites" itemprop="significantLink">Worldwide</a> </div>
+<div class="rankingItem-underTitle" itemprop="url">
+<a class="rankingItem-subTitle is-link" data-analytics-category="Internal Link" data-analytics-label="Country Rank/840" href="/top-websites/united-states" itemprop="significantLink">United States</a> <i class="flag us"></i> </div>
+<div class="rankingItem-underTitle" itemprop="url">
+<a class="rankingItem-subTitle is-link" data-analytics-category="Internal Link" data-analytics-label="Category Rank/sports" href="/top-websites/category/sports" itemprop="significantLink">Sports</a> <a class="rankingItem-categoryEdit js-editCategory" data-options='{"domain":"shotput.com","category": "Sports","categoryIconClass":"sports","categoryLabel": "Sports"}' itemprop="name">Edit</a>
+</div>
+<div class="rankingItem-rank js-editable">
+<span class="rankingItem-value js-countable" data-value="5,447,784">5,447,784</span><i class="rankingItem-valueIcon rankingItem-valueIcon--decreased icon-arrow-down-ranking rankingItem-valueIcon--is-shown"></i>
+</div>
+<div class="rankingItem-rank js-editable">
+<span class="rankingItem-value js-countable" data-value="2,117,644">2,117,644</span><i class="rankingItem-valueIcon rankingItem-valueIcon--decreased icon-arrow-down-ranking rankingItem-valueIcon--is-shown"></i>
+</div>
+<div class="rankingItem-rank js-editable">
+<span class="rankingItem-value js-countable" data-value="106,307">106,307</span><i class="rankingItem-valueIcon rankingItem-valueIcon--decreased icon-arrow-down-ranking rankingItem-valueIcon--is-shown"></i>
+</div>
+<span class="rankingItem-value js-countable" data-value="5,447,784">5,447,784</span>
+<span class="rankingItem-value js-countable" data-value="2,117,644">2,117,644</span>
+<span class="rankingItem-value js-countable" data-value="106,307">106,307</span>
+
+
+
+            #span class="rankingItem-value js-countable"
+#             print("********  Start for loop to read soup  ********")
+#             #for line in soup.findAll('a', class_="rankingItem-subTitle is-link"):
+#             for line in soup.findAll('div', class_="rankingItem-underTitle"):
+#                 # Append to a file or write to a data frame
+#                 # Write to a file
+#                 with open('mystats1.csv', 'a') as csvfile:
+#                     csvwriter = csv.writer(csvfile, delimiter=',')
+#                     csvwriter.writerow(line)
+            
+#             for line in soup.findAll('div', class_="rankingItem-rank js-editable"): 
+#             #for line in soup.findAll('span', class_="rankingItem-value js-countable"):
+#                 # Append to a file or write to a data frame
+#                 # Write to a file
+#                 with open('mystats2.csv', 'a') as csvfile:
+#                     csvwriter = csv.writer(csvfile, delimiter=',')
+#                     csvwriter.writerow(line)
+            
+#             for line in soup.findAll('span', class_="rankingItem-value js-countable"):
+#                 # Append to a file or write to a data frame
+#                 # Write to a file
+#                 with open('mystats3.csv', 'a') as csvfile:
+#                     csvwriter = csv.writer(csvfile, delimiter=',')
+#                     csvwriter.writerow(line)
+            
+#             # Grab 1 activity text fields from the html
+#             line = soup.find('span', class_="engagementInfo-param engagementInfo-param--large u-text-ellipsis")
+#             # Write to a file
+#             with open('mystats4.csv', 'a') as csvfile:
+#                 csvwriter = csv.writer(csvfile, delimiter=',')
+#                 csvwriter.writerow(line)
+        
+#             # Grab 3 activity text fields from the html 
+#             for line in soup.findAll('span', class_="engagementInfo-param u-text-ellipsis"):
+#             #for line in soup.findAll('span', class_="engagementInfo-valueNumber"):
+#                 # Write to a file
+#                 with open('mystats5.csv', 'a') as csvfile:
+#                     csvwriter = csv.writer(csvfile, delimiter=',')
+#                     csvwriter.writerow(line.get('span'))
