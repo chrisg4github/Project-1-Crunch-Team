@@ -1,5 +1,8 @@
+
+
 # Method 1: gives AttributeError: 'str' object has no attribute 'str'
 top_orgs["Total Visits"] = top_orgs["Total Visits"].apply(lambda x: x.replace('[<>K]','', regex=True).astype(np.float64)* 1000 if "K" in x else x.replace('[<>M]','', regex=True ).astype(np.float64)* 1000000)                                         
+
 
 # Method 2: gives AttributeError: 'str' object has no attribute 'str'
 # for index, row in top_orgs.iterrows():
@@ -8,6 +11,7 @@ top_orgs["Total Visits"] = top_orgs["Total Visits"].apply(lambda x: x.replace('[
 #         print("found a K")
 #     else:
 #         print("found something else...")
+
 
 # Method 3:
 # k_top = top_orgs.loc[top_orgs["Total Visits"].str.contains("K")]
@@ -18,24 +22,42 @@ top_orgs["Total Visits"] = top_orgs["Total Visits"].apply(lambda x: x.replace('[
 #     row["Total Visits"] = row["Total Visits"].apply.replace('[<>K]','') #.astype(np.float64)* 1000
 #     print(row["Total Visits"])
 
+
 ## Method 4: df.loc[df.b > 0, 'd'] = 1
 # top_orgs = top_orgs.loc[top_orgs["Total Visits"].str.contains("K"),
 #                         top_orgs["Total Visits"].replace('[<>K]','',
 #                         regex=True).astype(np.float64)* 1000]
+
+
 ## Method 5: 
 # for i in range(0, len(array1)):
 #     print("found ", array1[i])
 #     print(type(array1[i]))
 #     if "K" in array1[i]:
 #         print("found a K")
-   
-1
+
 
 # top_orgs["Total Visits"] = top_orgs["Total Visits"].replace('[<>M]','',regex=True).astype(np.float64)* 1000000
 #print(len(k_top.index))
 
 
+# Working Method:
+# for index, row in closed_df.iterrows():
+#     print("index is: ", index)
+#     print(row["Total Visits"])
+#     print(type(row["Total Visits"]))
+    
+#     str1 = str(row["Total Visits"])
+#     if "K" in str1:
+#         str1 = re.sub('[<K]', '', str1)
+#         flt_str1 = float(str1) * 1000
+#         print("str1 with a K is ", str1)
+#         closed_df.set_value(index, "Total Visits", flt_str1)
+#     else:
+#         str1 = re.sub('[<M]', '', str1)
+#         flt_str1 = float(str1) * 1000000
+#         print("other str1 is ", str1)
+#         closed_df.set_value(index, "Total Visits", flt_str1)
 
-\c dbname username
 
-psql -d database -U  user -W
+
